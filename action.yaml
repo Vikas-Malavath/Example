@@ -1,0 +1,7 @@
+name: Send email
+description: Send an email to multiple recipients
+
+runs:
+  using: "composite"
+  steps: 
+    uses: actions/checkout@v3
