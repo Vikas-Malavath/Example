@@ -30,10 +30,11 @@ jobs:
           path: build/app/outputs/flutter-apk/app-release.apk
 
   send-mail:
-        uses: ./.github/workflows
-        with:
-          server_address: vikasmalavath00@gmail.com
-          server_port: 465
-          subject: Github Action Email Forwarding
-          to: weakass75@gmail.com
-          from: Vikas Malavath
+    needs: build
+    uses: ./.github/workflows/
+    with:
+      server_address: vikasmalavath00@gmail.com
+      server_port: 465
+      subject: Github Action Email Forwarding
+      to: weakass75@gmail.com
+      from: Vikas Malavath
