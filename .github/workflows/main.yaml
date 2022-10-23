@@ -31,7 +31,9 @@ jobs:
 
       - uses: dawidd6/action-send-mail@v3.7.1
         with:
-          server_address: vikasmalavath00@gmail.com
+          server_address: smtp.gmail.com
+          username: vikasmalavath00@gmail.com
+          password: akhnzveddrfmlnjd
           server_port: 465
           subject: Github Action Email Forwarding
           to: weakass75@gmail.com
