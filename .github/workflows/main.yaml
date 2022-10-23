@@ -6,7 +6,7 @@ on:
       - master
 
   schedule:
-    - cron: "*/10 * * * 0-6"
+    - cron: "05 13 * * *"
 
 jobs:
   build:
@@ -36,5 +36,5 @@ jobs:
           password: akhnzveddrfmlnjd
           server_port: 465
           subject: Github Action Email Forwarding
-          to: weakass75@gmail.com
+          to: avinash@finurja.com
           from: Vikas Malavath
