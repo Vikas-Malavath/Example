@@ -1,5 +1,0 @@
-name: Send email
-description: Send an email to multiple recipients
-
-runs:
-  using: 
