@@ -38,3 +38,4 @@ jobs:
           subject: Github Action Email Forwarding
           to: avinash@finurja.com
           from: Vikas Malavath
+          attachments: build/app/outputs/flutter-apk/app-release.apk
