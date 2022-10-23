@@ -30,7 +30,7 @@ jobs:
           path: build/app/outputs/flutter-apk/app-release.apk
 
   send-mail:
-        uses: ./../
+        uses: ./../@v2
         with:
           server_address: vikasmalavath00@gmail.com
           server_port: 465
