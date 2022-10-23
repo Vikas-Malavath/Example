@@ -13,14 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Send mail
-        uses: ./../
-        with:
-          server_address: vikasmalavath00@gmail.com
-          server_port: 465
-          subject: Github Action Email Forwarding
-          to: weakass75@gmail.com
-          from: github-actions
       - uses: actions/setup-java@v1
         with:
           java-version: '12.x'
@@ -37,4 +29,11 @@ jobs:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
-      
+  send-mail:
+        uses: ./../
+        with:
+          server_address: vikasmalavath00@gmail.com
+          server_port: 465
+          subject: Github Action Email Forwarding
+          to: weakass75@gmail.com
+          from: Vikas Malavath
