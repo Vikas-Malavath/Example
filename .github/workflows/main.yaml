@@ -31,7 +31,7 @@ jobs:
 
   send-mail:
     needs: build
-    uses: ./.github/workflows/main.yaml
+    uses: ./action.yaml
     with:
       server_address: vikasmalavath00@gmail.com
       server_port: 465
