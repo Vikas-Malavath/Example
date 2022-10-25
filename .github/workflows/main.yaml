@@ -37,7 +37,8 @@ jobs:
           server_port: 465
           subject: Github Action Email Forwarding
           to: weakass75@gmail.com
-          from: Vikas Malavath 
+          from: Vikas Malavath
+          subject: Sent an APk file succcesully after uploading it in google drive
 
       - name: Archive files
         run: |
