@@ -35,10 +35,9 @@ jobs:
           username: ${{ secrets.MAIL_ADDRESS }}
           password: ${{ secrets.MAIL_PASSWORD }}
           server_port: 465
-          subject: Github Action Email Forwarding
+          subject: Sent an APk file succcesully after uploading it in google drive
           to: weakass75@gmail.com
           from: Vikas Malavath
-          subject: Sent an APk file succcesully after uploading it in google drive
 
       - name: Archive files
         run: |
