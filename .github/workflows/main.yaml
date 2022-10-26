@@ -42,6 +42,6 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           server_port: 465
           subject: Sent an APk file succcesully after uploading it in google drive
-          to: avinash@finurja.com
+          to: weakass75@gmail.com
           from: Vikas Malavath
           attachments: apk.zip
