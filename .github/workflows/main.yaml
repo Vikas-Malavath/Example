@@ -33,7 +33,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install zip
-          zip -r apk.zip build/app/outputs/flutter-apk/app-release.apk
+          zip -r archive.zip build/app/outputs/flutter-apk/app-release.apk
 
       - uses: dawidd6/action-send-mail@v3.7.1
         with:
@@ -44,4 +44,4 @@ jobs:
           subject: Sent an APk file succcesully after uploading it in google drive
           to: weakass75@gmail.com
           from: Vikas Malavath
-          attachments: apk.zip
+          attachments: archive.zip
