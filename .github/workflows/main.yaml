@@ -29,6 +29,12 @@ jobs:
           name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
+      - name: Archive files
+        run: |
+          sudo apt-get update
+          sudo apt-get install zip
+          zip -r apk.zip build/app/outputs/flutter-apk/app-release.apk
+
       - uses: dawidd6/action-send-mail@v3.7.1
         with:
           server_address: smtp.gmail.com
@@ -38,19 +44,4 @@ jobs:
           subject: Sent an APk file succcesully after uploading it in google drive
           to: avinash@finurja.com
           from: Vikas Malavath
-          body: https://drive.google.com/drive/folders/1a5SvK_F0ol7F1H-JEPDCI4HhTDCy1-_Y?usp=sharing
-
-      - name: Archive files
-        run: |
-          sudo apt-get update
-          sudo apt-get install zip
-          zip -r apk.zip build/app/outputs/flutter-apk/app-release.apk
-
-      - name: Upload to gdrive
-        uses: adityak74/google-drive-upload-git-action@main
-        with:
-          credentials: ${{ secrets.CREDENTIALS }}
-          filename: "apk.zip"
-          folderId: ${{ secrets.FOLDER_ID }}
-          name: "apk.zip" # optional string
-          overwrite: "true"
+          attachments: apk.zip
